@@ -37,6 +37,6 @@
   }
   
   .gradient-text {
-    @apply bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 bg-clip-text text-transparent;
   }
 }

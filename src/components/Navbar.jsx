@@ -4,6 +4,8 @@ import { Menu, X, Code } from "lucide-react";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [displayText, setDisplayText] = useState("");
+  const fullText = "Gabriel Gálvez";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -11,6 +13,19 @@ const Navbar = () => {
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    let index = 0;
+    const timer = setInterval(() => {
+      if (index <= fullText.length) {
+        setDisplayText(fullText.slice(0, index));
+        index++;
+      } else {
+        clearInterval(timer);
+      }
+    }, 100);
+    return () => clearInterval(timer);
   }, []);
 
   const navItems = [
@@ -33,7 +48,15 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-16">
           <a href="#home" className="flex items-center space-x-2 group">
             <Code className="w-6 h-6 text-accent group-hover:rotate-12 transition-transform" />
-            <span className="text-xl font-bold">Portfolio</span>
+            <span className="text-xl font-bold">
+              <span className="text-white">
+                {displayText.substring(0, 7)}
+              </span>
+              <span className="text-accent">
+                {displayText.substring(7)}
+              </span>
+              <span className="animate-pulse">|</span>
+            </span>
           </a>
 
           <div className="hidden md:flex items-center space-x-8">
@@ -41,17 +64,11 @@ const Navbar = () => {
               <a
                 key={item.name}
                 href={item.href}
-                className="text-secondary hover:text-primary transition-colors text-sm font-medium"
+                className="text-secondary hover:text-primary transition-colors text-sm font-medium "
               >
                 {item.name}
               </a>
             ))}
-            <a
-              href="#contact"
-              className="px-4 py-2 bg-accent text-white rounded-lg text-sm font-medium hover:bg-accent-dark transition-colors"
-            >
-              Contactar
-            </a>
           </div>
 
           <button

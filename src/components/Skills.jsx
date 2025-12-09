@@ -73,9 +73,7 @@ const Skills = () => {
                   className="flex justify-between items-center py-2 border-b border-gray-800 last:border-0"
                 >
                   <span className="text-primary">{skill.name}</span>
-                  <span className="text-accent text-sm font-medium px-3 py-1 bg-accent/10 rounded-full">
-                    {skill.level}
-                  </span>
+
                 </li>
               ))}
             </ul>

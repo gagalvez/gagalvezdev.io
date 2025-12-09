@@ -13,15 +13,17 @@ const Hero = () => {
         </div>
 
         <h1 className="text-5xl md:text-6xl font-bold mb-6">
-          <span className="gradient-text">Desarrollador</span>
+          <span className="text-white">Gabriel Esteban</span>
           <br />
-          <span className="text-white">Full Stack</span>
+          <span className="gradient-text">Gálvez Valenzuela</span>
         </h1>
 
         <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed">
-          Creo soluciones digitales elegantes y funcionales con código limpio y
-          atención al detalle. Especializado en tecnologías modernas y
-          escalables.
+          Aficionado a la tecnología y al aprendizaje continuo. Aplico buenas
+          prácticas, escribo código limpio y estudio a diario para seguir
+          progresando en mi camino como desarrollador. Me gusta crear soluciones
+          claras, modernas y funcionales mientras sigo creciendo
+          profesionalmente
         </p>
 
         <div className="flex flex-wrap justify-center gap-4 mb-16">
@@ -42,14 +44,14 @@ const Hero = () => {
 
         <div className="flex justify-center space-x-6">
           <a
-            href="mailto:tu@email.com"
+            href="mailto:ga.galvez.v@gmail.com"
             className="p-3 rounded-full bg-gray-900 border border-gray-800 hover:border-blue-500 transition-colors group"
             aria-label="Email"
           >
             <Mail className="w-5 h-5 text-gray-400 group-hover:text-blue-500" />
           </a>
           <a
-            href="https://github.com"
+            href="https://github.com/gagalvez"
             target="_blank"
             rel="noopener noreferrer"
             className="p-3 rounded-full bg-gray-900 border border-gray-800 hover:border-blue-500 transition-colors group"
@@ -58,7 +60,7 @@ const Hero = () => {
             <Github className="w-5 h-5 text-gray-400 group-hover:text-blue-500" />
           </a>
           <a
-            href="https://linkedin.com"
+            href="https://www.linkedin.com/in/ggalvezv"
             target="_blank"
             rel="noopener noreferrer"
             className="p-3 rounded-full bg-gray-900 border border-gray-800 hover:border-blue-500 transition-colors group"
